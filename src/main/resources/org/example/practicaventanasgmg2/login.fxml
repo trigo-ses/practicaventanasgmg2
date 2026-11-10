@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.practicaventanasgmg2.LoginController">
+    <center>
+        <ImageView fitHeight="160.0" fitWidth="160.0" pickOnBounds="true" preserveRatio="true" smooth="true" BorderPane.alignment="CENTER">
+            <viewport>
+                <Rectangle2D minX="262.5" minY="0.0" width="675.0" height="675.0" />
+            </viewport>
+            <image>
+                <Image url="@/Neural-DSP-Archetype-Tim-Henson-X.jpg" />
+            </image>
+            <clip>
+                <Circle centerX="80.0" centerY="80.0" radius="80.0" />
+            </clip>
+        </ImageView>
+    </center>
+    <bottom>
+        <Button fx:id="btnIniciar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleIniciar" prefHeight="54.0" prefWidth="149.0" style="-fx-background-radius: 15px;" text="INICIAR" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="70.0" />
+            </BorderPane.margin>
+        </Button>
+    </bottom>
+</BorderPane>

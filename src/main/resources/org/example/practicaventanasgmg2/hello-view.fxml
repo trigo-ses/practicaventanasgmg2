@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.practicaventanasgmg2.HelloController">
+   <center>
+      <VBox alignment="CENTER" maxWidth="400.0" spacing="20.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+      
+          <Label fx:id="welcomeText" text="Ficha de material">
+            <font>
+               <Font name="System Bold" size="27.0" />
+            </font>
+         </Label>
+         <Separator prefWidth="200.0" />
+         <FlowPane alignment="CENTER">
+            <children>
+               <Label prefWidth="75.0" text="Id" />
+               <Spinner fx:id="spinnerId" />
+            </children></FlowPane>
+         <FlowPane alignment="CENTER">
+            <children>
+               <Label prefWidth="75.0" text="Nombre" />
+               <TextField fx:id="txtNombre" />
+            </children>
+         </FlowPane>
+         <FlowPane alignment="CENTER">
+            <children>
+               <Label prefWidth="75.0" text="Categoria" />
+               <ChoiceBox fx:id="choiceCategory" prefWidth="150.0" />
+               <ListView fx:id="lista" prefHeight="200.0" prefWidth="200.0" />
+            </children>
+         </FlowPane>
+         <FlowPane alignment="CENTER">
+            <children>
+               <CheckBox fx:id="checkDisponible" mnemonicParsing="false" text="Disponible" />
+            </children>
+         </FlowPane>
+         <FlowPane alignment="CENTER">
+            <children>
+               <ToggleButton fx:id="btnDisponible" mnemonicParsing="false" text="Disponible">
+                  <toggleGroup>
+                     <ToggleGroup fx:id="disponibilidad" />
+                  </toggleGroup>
+               </ToggleButton>
+               <ToggleButton fx:id="btnNoDisponible" mnemonicParsing="false" text="No disponible" toggleGroup="$disponibilidad" />
+            </children>
+         </FlowPane>
+         <FlowPane alignment="CENTER" hgap="20.0">
+            <children>
+                <Button contentDisplay="TOP" graphicTextGap="0.0" onAction="#guardar" text="Guardar">
+                  <graphic>
+                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../floppy-disk.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+               <Button contentDisplay="TOP" graphicTextGap="0.0" mnemonicParsing="false" onAction="#volver" text="Volver">
+                  <graphic>
+                     <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                           <Image url="@../../../logout.png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </FlowPane>
+      </VBox>
+   </center>
+</BorderPane>
